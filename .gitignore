@@ -1,8 +1,14 @@
-# Build results
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
+cache/
+[.]Xil/
 *.o
 *.d
 *.elf
+*.elf.elfcheck
+*.elf.size
+*.log
+*.jou
+*.debug

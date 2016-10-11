@@ -234,3 +234,100 @@ make -k all
 01:45:24 **** Incremental Build of configuration Debug for project DivaController ****
 make all 
 make: Nothing to be done for `all'.
+02:09:28 **** Auto Build of project DivaController_bsp ****
+make -k all 
+'Finished building libraries'
+02:16:04 **** Incremental Build of configuration Debug for project DivaController ****
+make all 
+make: Nothing to be done for `all'.
+02:16:13 **** Clean-only build of configuration Debug for project DivaController ****
+make clean 
+rm -rf  ./src/lcd_1602/lcd_1602_driver_4bit.o  ./src/main.o ./src/platform.o  ./src/lcd_1602/lcd_1602_driver_4bit.d  ./src/main.d ./src/platform.d  DivaController.elf.size  DivaController.elf.elfcheck  DivaController.elf
+' '
+02:16:14 **** Clean-only build of project DivaController_bsp ****
+make -k clean 
+rm -rf microblaze_0
+02:16:14 **** Build of project DivaController_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-multiply-high -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-multiply-high -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling lldma"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling dsdac"
+"Compiling mpmc"
+"Compiling bram"
+"Compiling iic"
+"Compiling uartlite"
+"Compiling pcie"
+"Compiling intc"
+"Compiling tmrctr"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+02:16:22 **** Build of configuration Debug for project DivaController ****
+make all 
+'Building file: ../src/lcd_1602/lcd_1602_driver_4bit.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../DivaController_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lcd_1602/lcd_1602_driver_4bit.d" -MT"src/lcd_1602/lcd_1602_driver_4bit.d" -o "src/lcd_1602/lcd_1602_driver_4bit.o" "../src/lcd_1602/lcd_1602_driver_4bit.c"
+'Finished building: ../src/lcd_1602/lcd_1602_driver_4bit.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../DivaController_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../DivaController_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: DivaController.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DivaController_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "DivaController.elf"  ./src/lcd_1602/lcd_1602_driver_4bit.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: DivaController.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DivaController.elf  |tee "DivaController.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71436	   1676	   2280	  75392	  12680	DivaController.elf
+'Finished building: DivaController.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck DivaController.elf -hw ../../system_hw_platform/system.xml -pe microblaze_0  |tee "DivaController.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../system_hw_platform/system.xml -pe microblaze_0
+DivaController.elf 
+
+ELF file	: DivaController.elf
+elfcheck passed.
+'Finished building: DivaController.elf.elfcheck'
+' '

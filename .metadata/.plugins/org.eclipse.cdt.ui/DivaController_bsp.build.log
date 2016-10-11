@@ -1,6 +1,46 @@
-01:45:20 **** Auto Build of project DivaController_bsp ****
+02:16:14 **** Build of project DivaController_bsp ****
 make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-multiply-high -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-multiply-high -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling lldma"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling dsdac"
+"Compiling mpmc"
+"Compiling bram"
+"Compiling iic"
+"Compiling uartlite"
+"Compiling pcie"
+"Compiling intc"
+"Compiling tmrctr"
+"Compiling cpu"
+Running execs_generate.
 'Finished building libraries'
 
-01:45:20 Build Finished (took 78ms)
+02:16:22 Build Finished (took 7s.818ms)
 

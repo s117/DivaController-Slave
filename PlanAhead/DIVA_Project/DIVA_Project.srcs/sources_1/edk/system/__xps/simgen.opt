@@ -1,0 +1,1 @@
+ -p virtex5 -lang verilog$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT) -msg __xps/ise/xmsgprops.lst -s isim -X D:/Bitman/EDA_Project/XSDK_workspace/DivaController-Slave/PlanAhead/DIVA_Project/DIVA_Project.srcs/sources_1/edk/system/
