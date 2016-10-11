@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="system_bd.bmm" key="system_hw_platform-bmmFile"/>
+	<item value="bootloop" key="system_hw_platform-system_i/microblaze_0-initElf"/>
+	<item value="system.bit" key="system_hw_platform-bitFile"/>
+</section>

@@ -1,0 +1,6 @@
+01:45:20 **** Auto Build of project DivaController_bsp ****
+make -k all 
+'Finished building libraries'
+
+01:45:20 Build Finished (took 78ms)
+
